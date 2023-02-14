@@ -24,10 +24,11 @@ namespace SmartVault.Program
             long size = 0;
             foreach (FileInfo fi in files)
             {
+                Console.WriteLine($"File Size: {fi.Length} bytes");
                 size += fi.Length;
             }
             //Total file size of all output files
-            Console.WriteLine($"Total Size: {size} bytes");
+            Console.WriteLine($"Total Size of all files: {size} bytes");
         }
 
         private static void WriteEveryThirdFileToFile(string accountId)
